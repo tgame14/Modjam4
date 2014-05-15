@@ -1,5 +1,7 @@
 package com.tgame.modjam4.Items;
 
+import com.tgame.modjam4.EOMCreativeTab;
+import com.tgame.modjam4.Settings;
 import net.minecraft.item.Item;
 
 /**
@@ -10,6 +12,11 @@ public class ItemCastingStick extends Item
 {
     public ItemCastingStick ()
     {
+        this.setUnlocalizedName(this.getClass().getSimpleName());
+        this.setCreativeTab(EOMCreativeTab.INSTANCE);
+        this.setTextureName(Settings.RESOURCE_LOCATION + this.getClass().getSimpleName());
 
     }
+
+
 }

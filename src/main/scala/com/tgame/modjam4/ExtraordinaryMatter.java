@@ -1,11 +1,14 @@
 package com.tgame.modjam4;
 
+import com.tgame.modjam4.Items.ItemCastingStick;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.Item;
 
 /**
  * @since 15/05/14
@@ -23,9 +26,13 @@ public class ExtraordinaryMatter
     @Mod.Metadata
     public static ModMetadata metadata;
 
+    public static Item itemCastingStick;
+
     @Mod.EventHandler
     public void preInit (FMLPreInitializationEvent event)
     {
+        itemCastingStick = new ItemCastingStick();
+        GameRegistry.registerItem(itemCastingStick, itemCastingStick.getClass().getName());
 
     }
 
