@@ -56,5 +56,6 @@ public class SpellRegistry
         {
             return spellList.get(spellList.indexOf(key));
         }
+        return null;
     }
 }
